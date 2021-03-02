@@ -18,16 +18,16 @@ interface CountdownProviderProps{
 
 export const CountdownContext = createContext({} as CountdownContextData);
 
+let countdownTimeout: NodeJS.Timeout;
+
 export function CountdownProvider({ children }: CountdownProviderProps){
 	
-	const timeInSeconds = Math.floor(0.04*60);
+	const timeInSeconds = Math.floor(0.1*60);
 
 	const [ time, setTime ] = useState(timeInSeconds);
 
 	const minutes = Math.floor(time / 60);
 	const seconds = time % 60;
-
-	console.log(time);
 
 	const [isActive, setIsActive] = useState(false);
 
@@ -40,19 +40,21 @@ export function CountdownProvider({ children }: CountdownProviderProps){
 	}
 
 	function decreaseTime(){
-		setTime(time-1);
+		countdownTimeout = setTimeout(() => {
+			setTime(time-1);
+		}, 1000)
 	}
 
 	function startCountdown(){
 		setIsActive(true);
 	}
 
-	function resetCountdown(countdownTimeout){
+	function resetCountdown(){
 		clearTimeout(countdownTimeout);
 		
 		setIsActive(false);
 
-		setHasFinished(false);		
+		setHasFinished(false);
 		
 		setTime(timeInSeconds);
 	}
