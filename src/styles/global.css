@@ -11,10 +11,10 @@
 	--text: #666;
 	--text-highlight: #B3B9FF;
 	--title: #2E384D;
-	--red: #E83F5B;
-	--green: #4CD62B;
-	--blue: #5965E0;
-	--blue-dark: #4953B8;
+	--red: #E51F40;
+	--green: #47C926;
+	--blue: #025FAC;
+	--blue-dark: #013D6F;
 	--blue-twitter: #2AA9E0;
 }
 
@@ -37,7 +37,8 @@ body{
 }
 
 body, input, textarea, button{
-	font: 400 1rem "Inter", sans-serif;
+	/*font: 400 1rem "Inter", sans-serif;*/
+	font: 400 1rem "Hind+Siliguri", sans-serif;
 }
 
 button{
