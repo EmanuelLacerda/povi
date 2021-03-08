@@ -1,10 +1,5 @@
 .challengeBoxContainer{
-	height: 100%;
-
-	background: var(--white);
 	border-radius: 5px;
-	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-	padding: 1.5rem 2rem;
 
 	display: flex;
 	flex-direction: column;
@@ -15,32 +10,56 @@
 }
 
 .challengeNotActive{
+	height: 70%;
+
+	background: var(--white);
+
+	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+
+	padding: 3.5rem 0rem;
+
+	margin-top: 0.6rem;
+
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .challengeNotActive strong{
-	font-size: 1.5rem;
-	font-weight: 500;
+	width: 70%;
+
+	font-size: 1rem;
+	font-weight: 600;
 	line-height: 1.4;
 }
 
 .challengeNotActive p{
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	line-height: 1.4;
-	max-width: 70%;
-	margin-top: 3rem;
+	max-width: 60%;
+	font-size: 0.9rem; /*Novo*/
+	margin-top: 0.90rem;
 }
 
 .challengeNotActive p img{
-	margin-bottom: 1rem;
+	width: 1rem;
 }
 
 .challengeActive{
-	height: 100%;
+	height: 70%;
+	width: 23rem;
+
+	background: var(--white);
+
+	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+
+	padding: 0 2rem;
+	padding-top: 0.7rem;
+	padding-bottom: 0.2rem;
+
+	margin-top: 0.35rem;
 
 	display: flex;
 	flex-direction: column;
@@ -49,13 +68,14 @@
 .challengeActive header{
 	color: var(--blue);
 	font-weight: 600;
-	font-size: 1.25rem;
-	padding: 0 2rem 1.5rem;
+	padding: 0 2rem 0.5rem;
 	border-bottom: 1px solid var(--gray-line);
 }
 
 .challengeActive main{
 	flex: 1;
+
+	margin-top: 0.4rem;
 
 	display: flex;
 	flex-direction: column;
@@ -63,15 +83,22 @@
 	justify-content: center;
 }
 
+.challengeActive main img{
+	width: 4rem;
+}
+
 .challengeActive main strong{
-	font-size: 2rem;
+	font-size: 1.25rem;
 	font-weight: 600;
 	color: var(--title);
-	margin: 1.5rem 0 1rem;
+	margin: 0.15rem 0 0.25rem;
 }
 
 .challengeActive main p{
+	width: 100%;
+	font-size: 0.8rem;
 	line-height: 1.5;
+	margin-bottom: 0.4rem;
 }
 
 .challengeActive footer{
@@ -108,4 +135,121 @@
 
 .challengeActive footer button:hover{
 	filter: brightness(0.9);
+}
+
+@media screen and (min-width: 666px) {
+	.challengeNotActive{
+		padding: 10rem 0rem;
+	}
+
+	.challengeNotActive strong{
+		width: 90%;
+		font-size: 1.40rem;
+	}
+
+	.challengeNotActive p{
+		max-width: 80%;
+		font-size: 1.15rem;
+	}
+
+	.challengeNotActive p img{
+		width: 1.5rem;
+	}
+
+	.challengeActive{
+		height: 100%;
+		width: 100%;
+
+		padding: 4.2rem 2rem;
+
+		margin-top: 10px;
+	}
+
+	.challengeActive header{
+		font-size: 1.25rem;
+		padding: 0 2rem 1.5rem;
+	}
+
+	.challengeActive main{
+		margin-top: 0;
+	}
+
+	.challengeActive main img{
+		margin-top: 10px;
+		width: 140px;
+	}
+
+	.challengeActive main p{
+		width: 100%;
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+
+
+}
+
+@media screen and (min-width: 666px) {
+	.challengeActive{
+		height: 100%;
+
+		padding: 1.6rem 2rem;
+
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 698px) {
+	.challengeBoxContainer{
+		height: 100%;
+		background: var(--white);
+		box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+
+		margin-top: 0.35rem;
+		margin-bottom: 0.35rem;
+	}
+
+	.challengeNotActive{
+		height: 100%;
+
+		padding: 6.3rem 2rem;
+
+		margin-top: 0;
+	}
+
+	.challengeNotActive strong{
+		width: 90%;
+
+		max-width: 100%;
+
+		font-size: 1.5rem;
+	}
+
+	.challengeNotActive p{
+		max-width: 80%;
+		font-size: 1.2rem;
+		margin-top: 3rem;
+	}
+
+	.challengeNotActive p img{
+		width: 2rem;
+	}
+
+	.challengeActive header{
+		font-size: 1.25rem;
+		padding: 0 2rem 1.5rem;
+	}
+
+	.challengeActive main{
+		margin-top: 0;
+	}
+
+	.challengeActive main img{
+		width: 140px;
+	}
+
+	.challengeActive main p{
+		width: 100%;
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
 }

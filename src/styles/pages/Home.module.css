@@ -6,13 +6,52 @@
 
 	display: flex;
 	flex-direction: column;
+
+	//background: var(--blue);
 }
 
 .container section{
 	flex: 1;
 
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 6.25rem;
-	align-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sectionFirstChild{
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (min-width: 666px) {
+	.container section{
+		//background-color: blue;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		align-content: center;
+	}
+
+	.sectionFirstChild{
+		flex: 1;
+
+		display: block;
+	}
+}
+
+@media screen and (min-width: 698px) {
+	.container section{
+		//background-color: red;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 6.25rem;
+		align-content: center;
+	}
 }

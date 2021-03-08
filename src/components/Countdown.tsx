@@ -22,7 +22,7 @@ export function Countdown(){
 	}, [isActive, time])
 	
 	return (
-		<div>
+		<div className={styles.generalContainer}>
 			<div className={styles.countdownContainer}>
 				<div>
 					<span>{minuteLeft}</span>
