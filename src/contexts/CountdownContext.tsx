@@ -6,6 +6,8 @@ interface CountdownContextData{
 	time: number;
 	hasFinished: boolean;
 	isActive: boolean;
+	warnThatThereAreTenMinutesLeft: () => void;
+	warnThatThereAreFiveMinutesLeft: () => void;
 	decreaseTime: () => void;
 	endCycle: () => void;
 	startCountdown: () => void;
@@ -45,6 +47,18 @@ export function CountdownProvider({ children }: CountdownProviderProps){
 		}, 1000)
 	}
 
+	function warnThatThereAreTenMinutesLeft(){
+		new Audio('/notification.mp3').play();
+
+		new Notification('Faltam 10 minutos');
+	}
+
+	function warnThatThereAreFiveMinutesLeft(){
+		new Audio('/notification.mp3').play();
+		
+		new Notification('Faltam 5 minutos');
+	}
+
 	function startCountdown(){
 		setIsActive(true);
 	}
@@ -66,6 +80,8 @@ export function CountdownProvider({ children }: CountdownProviderProps){
 	  		time,
 	  		hasFinished,
 	  		isActive,
+	  		warnThatThereAreTenMinutesLeft,
+	  		warnThatThereAreFiveMinutesLeft,
 	  		decreaseTime,
 	  		endCycle,
 	  		startCountdown,

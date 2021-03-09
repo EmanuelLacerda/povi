@@ -6,7 +6,7 @@ import styles from '../styles/components/Countdown.module.css'
 import { useState, useEffect } from 'react';
 
 export function Countdown(){
-	const { time, minutes,seconds, isActive, hasFinished, decreaseTime, endCycle, startCountdown, resetCountdown } = useContext(CountdownContext);
+	const { time, minutes,seconds, isActive, hasFinished, warnThatThereAreTenMinutesLeft, warnThatThereAreFiveMinutesLeft, decreaseTime, endCycle, startCountdown, resetCountdown } = useContext(CountdownContext);
 	const { startNewChallenge } = useContext(ChallengesContext);
 
 	const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
@@ -14,8 +14,16 @@ export function Countdown(){
 
 	useEffect(() => {
 		if (isActive && time > 0){
+			if (Notification.permission === 'granted'){
+				if (time == 10*60){
+					warnThatThereAreTenMinutesLeft();
+				} else if (time == 5*60){
+					warnThatThereAreFiveMinutesLeft();
+				}
+			}
+
 			decreaseTime();
-		}  else if (time == 0){
+		} else if (time == 0){
 			endCycle();
 			startNewChallenge();
 		}
