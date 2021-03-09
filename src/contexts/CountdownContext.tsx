@@ -6,8 +6,8 @@ interface CountdownContextData{
 	time: number;
 	hasFinished: boolean;
 	isActive: boolean;
-	warnThatThereAreTenMinutesLeft: () => void;
-	warnThatThereAreFiveMinutesLeft: () => void;
+	warnThatThereAreTenMinutesLeft: (notificationSoundIsActive) => void;
+	warnThatThereAreFiveMinutesLeft: (notificationSoundIsActive) => void;
 	decreaseTime: () => void;
 	endCycle: () => void;
 	startCountdown: () => void;
@@ -24,7 +24,7 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({ children }: CountdownProviderProps){
 	
-	const timeInSeconds = Math.floor(0.1*60);
+	const timeInSeconds = Math.floor(10.1*60);
 
 	const [ time, setTime ] = useState(timeInSeconds);
 
@@ -47,14 +47,18 @@ export function CountdownProvider({ children }: CountdownProviderProps){
 		}, 1000)
 	}
 
-	function warnThatThereAreTenMinutesLeft(){
-		new Audio('/notification.mp3').play();
+	function warnThatThereAreTenMinutesLeft(notificationSoundIsActive){
+		if (notificationSoundIsActive){
+			new Audio('/notification.mp3').play();
+		}
 
 		new Notification('Faltam 10 minutos');
 	}
 
-	function warnThatThereAreFiveMinutesLeft(){
-		new Audio('/notification.mp3').play();
+	function warnThatThereAreFiveMinutesLeft(notificationSoundIsActive){
+		if (notificationSoundIsActive){
+			new Audio('/notification.mp3').play();
+		}
 		
 		new Notification('Faltam 5 minutos');
 	}

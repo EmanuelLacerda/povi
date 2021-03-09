@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengesContext'
 import { CountdownContext } from '../contexts/CountdownContext'
+import { NotificationSoundControllerContext } from '../contexts/NotificationSoundControllerContext'
 
 import styles from '../styles/components/Countdown.module.css'
 import { useState, useEffect } from 'react';
@@ -8,6 +9,8 @@ import { useState, useEffect } from 'react';
 export function Countdown(){
 	const { time, minutes,seconds, isActive, hasFinished, warnThatThereAreTenMinutesLeft, warnThatThereAreFiveMinutesLeft, decreaseTime, endCycle, startCountdown, resetCountdown } = useContext(CountdownContext);
 	const { startNewChallenge } = useContext(ChallengesContext);
+	const { notificationSoundIsActive } = useContext(NotificationSoundControllerContext);
+
 
 	const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
 	const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
@@ -16,16 +19,16 @@ export function Countdown(){
 		if (isActive && time > 0){
 			if (Notification.permission === 'granted'){
 				if (time == 10*60){
-					warnThatThereAreTenMinutesLeft();
+					warnThatThereAreTenMinutesLeft(notificationSoundIsActive);
 				} else if (time == 5*60){
-					warnThatThereAreFiveMinutesLeft();
+					warnThatThereAreFiveMinutesLeft(notificationSoundIsActive);
 				}
 			}
 
 			decreaseTime();
 		} else if (time == 0){
 			endCycle();
-			startNewChallenge();
+			startNewChallenge(notificationSoundIsActive);
 		}
 	}, [isActive, time])
 	

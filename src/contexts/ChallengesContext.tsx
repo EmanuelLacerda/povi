@@ -20,7 +20,7 @@ interface ChallengesContextData{
 	experienceToNextLevel: number;
 
 	activeChallenge: Challenge;	
-	startNewChallenge: () => void;
+	startNewChallenge: (notificationSoundIsActive) => void;
 
 	completeChallenge: () => void;
 	resetChallenge: () => void;
@@ -72,18 +72,20 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 		setIsLevelUpModalOpen(true);
 	}
 
-	function startNewChallenge(){
+	function startNewChallenge(notificationSoundIsActive){
 		const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
 		const challenge = challenges[randomChallengeIndex];
 
 		setActiveChallenge(challenge);
 
-		new Audio('/notification.mp3').play();
-
 		if (Notification.permission === 'granted'){
 			new Notification('Novo desafio', {
 				body: `Valendo ${challenge.amount}xp!`
 			})
+
+			if (notificationSoundIsActive){
+				new Audio('/notification.mp3').play();
+			}
 		}
 	}
 
