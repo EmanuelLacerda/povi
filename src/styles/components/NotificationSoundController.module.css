@@ -13,10 +13,10 @@
 }
 
 .notificationSoundController div button{
-	border: none;
-
 	width: 22px;
 	height: 22px;
+
+	border: none;
 }
 
 .notificationSoundController div button img{
@@ -30,11 +30,14 @@
 }
 
 .notificationSoundController div span{
-	visibility: hidden;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	width: 12rem;
+	height: 2rem;
+
+	margin-left: 10px;
 
 	border-radius: 6px;
 
@@ -42,12 +45,10 @@
 	color: #fff;
 
 	font-size: 0.8rem;
+
 	text-align: center;
 
-	width: 12rem;
-	height: 2rem;
-
-	margin-left: 10px;
+	visibility: hidden;
 }
 
 .notificationSoundController div:hover span{
