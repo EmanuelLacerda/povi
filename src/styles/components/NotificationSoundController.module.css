@@ -1,0 +1,86 @@
+.notificationSoundController{
+	display: flex;
+	align-items: center;
+}
+
+.notificationSoundController div{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	width: 20rem;
+	height: 2.5rem;
+}
+
+.notificationSoundController div button{
+	border: none;
+
+	width: 22px;
+	height: 22px;
+}
+
+.notificationSoundController div button img{
+	width: 20px;
+	height: 20px;
+}
+
+
+.notificationSoundController div button:focus{
+	outline: none;
+}
+
+.notificationSoundController div span{
+	visibility: hidden;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 6px;
+
+	background-color: black;
+	color: #fff;
+
+	font-size: 0.8rem;
+	text-align: center;
+
+	width: 12rem;
+	height: 2rem;
+
+	margin-left: 10px;
+}
+
+.notificationSoundController div:hover span{
+	visibility: visible;
+}
+
+@media screen and (min-width: 516px) {
+	.notificationSoundController div{
+		width: 27rem;
+		height: 2.5rem;
+	}
+	.notificationSoundController div{
+		justify-content: flex-start;
+	}
+
+	.notificationSoundController div span{
+		margin-left: 10px;
+	}
+}
+
+@media screen and (min-width: 666px){
+	.notificationSoundController{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.notificationSoundController div{
+		width: 20rem;
+	}
+
+	.notificationSoundController div button img{
+		width: 16px;
+		height: 16px;
+	}
+}

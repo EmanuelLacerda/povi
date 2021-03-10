@@ -1,32 +1,42 @@
 import { useContext } from 'react'
 import { NotificationSoundControllerContext } from '../contexts/NotificationSoundControllerContext'
 
+import styles from '../styles/components/NotificationSoundController.module.css'
+
 export function NotificationSoundController(){
 	const { notificationSoundIsActive, activateNotificationSound, muteNotificationSound } = useContext(NotificationSoundControllerContext);
 
 	return (
-		<>
+		<div className={styles.notificationSoundController}>
 			{ notificationSoundIsActive ? (
-				<button
-					onClick={muteNotificationSound}
-				>
-					<img
-						src="icons/sound.svg"
+				<div>
+					<button
+						onClick={muteNotificationSound}
 					>
+						<img
+							src="icons/sound.svg"
+						>
 
-					</img>
-				</button>
+						</img>
+					</button>
+
+					<span>Som de notificações: Ativo.</span>
+				</div>
 			) : (
-				<button
-					onClick={activateNotificationSound}
-				>
-					<img
-						src="icons/mute.svg"
+				<div>
+					<button
+						onClick={activateNotificationSound}
 					>
+						<img
+							src="icons/mute.svg"
+						>
 
-					</img>
-				</button>
+						</img>
+					</button>
+
+					<span>Som de notificações: Mutado.</span>
+				</div>
 			)}
-		</>
+		</div>
 	)
 }

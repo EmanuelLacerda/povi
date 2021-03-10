@@ -3,11 +3,10 @@
 	max-width: 992px;
 	margin: 0 auto;
 	padding: 2.5rem 2rem;
+	padding-top: 0.2rem;
 
 	display: flex;
 	flex-direction: column;
-
-	//background: var(--blue);
 }
 
 .container section{
@@ -28,10 +27,20 @@
 	justify-content: center;
 }
 
-@media screen and (min-width: 666px) {
-	.container section{
-		//background-color: blue;
+.divOfTheFirstChild{
+	flex: 1;
 
+	width: 20rem;
+}
+
+@media screen and (min-width: 666px) {
+	.container{
+		align-items: center;
+
+		padding-top: 1rem;
+	}
+
+	.container section{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
@@ -43,12 +52,14 @@
 
 		display: block;
 	}
+
+	.divOfTheFirstChild{
+		width: 22rem;
+	}
 }
 
-@media screen and (min-width: 698px) {
+@media screen and (min-width: 794px) {
 	.container section{
-		//background-color: red;
-
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 6.25rem;

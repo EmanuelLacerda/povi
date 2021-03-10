@@ -24,7 +24,7 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({ children }: CountdownProviderProps){
 	
-	const timeInSeconds = Math.floor(10.1*60);
+	const timeInSeconds = Math.floor(0.05*60);
 
 	const [ time, setTime ] = useState(timeInSeconds);
 

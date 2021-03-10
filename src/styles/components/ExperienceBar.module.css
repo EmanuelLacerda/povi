@@ -1,8 +1,10 @@
 .experienceBar{
+	width: 100%;
+
 	display: flex;
 	align-items: center;
 
-	margin-bottom: 1.5rem; /*Novo*/
+	margin-bottom: 1.5rem;
 }
 
 .experienceBar span{

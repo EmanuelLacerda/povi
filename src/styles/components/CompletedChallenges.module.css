@@ -3,7 +3,6 @@
 	align-items: center;
 	justify-content: space-between;
 
-	margin-top: 0.3rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #d7d8da;
 
@@ -30,13 +29,6 @@
 	.completedChallengesContainer{
 		width: 100%;
 	}
-}
-
-@media screen and (min-width: 698px) {
-	.completedChallengesContainer{
-		margin: 2rem 0;
-		margin-bottom: 1.7rem;
-	}
 
 	.completedChallengesContainer span:first-child{
 		font-size: 1.25rem;
@@ -44,5 +36,11 @@
 
 	.completedChallengesContainer span:last-child{
 		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width: 698px) {
+	.completedChallengesContainer{
+		margin-bottom: 0rem;
 	}
 }
