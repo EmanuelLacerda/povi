@@ -1,12 +1,13 @@
 .container{
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
 	max-width: 992px;
+	height: 100vh;
+	
 	margin: 0 auto;
 	padding: 2.5rem 2rem;
 	padding-top: 0.2rem;
-
-	display: flex;
-	flex-direction: column;
 }
 
 .container section{

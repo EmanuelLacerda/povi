@@ -37,12 +37,12 @@ body{
 }
 
 body, input, textarea, button{
-	/*font: 400 1rem "Inter", sans-serif;*/
 	font: 400 1rem "Hind+Siliguri", sans-serif;
 }
 
 button{
 	cursor: pointer;
+	outline: none;
 }
 
 a{

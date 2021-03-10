@@ -1,28 +1,27 @@
 .challengeBoxContainer{
-	border-radius: 5px;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
+	border-radius: 5px;
+
 	text-align: center;
 }
 
 .challengeNotActive{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	height: 70%;
+
+	margin-top: 0.6rem;
+	padding: 3.5rem 0rem;
 
 	background: var(--white);
 
 	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-
-	padding: 3.5rem 0rem;
-
-	margin-top: 0.6rem;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .challengeNotActive strong{
@@ -37,10 +36,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	line-height: 1.4;
+
 	max-width: 60%;
-	font-size: 0.9rem; /*Novo*/
+
 	margin-top: 0.90rem;
+
+	font-size: 0.9rem;
+	line-height: 1.4;
 }
 
 .challengeNotActive p img{
@@ -48,74 +50,85 @@
 }
 
 .challengeActive{
-	height: 70%;
+	display: flex;
+	flex-direction: column;
+
 	width: 23rem;
+	height: 70%;
 
-	background: var(--white);
-
-	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-
+	margin-top: 0.35rem;
 	padding: 0 2rem;
 	padding-top: 0.7rem;
 	padding-bottom: 0.2rem;
 
-	margin-top: 0.35rem;
+	background: var(--white);
 
-	display: flex;
-	flex-direction: column;
+	box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 }
 
 .challengeActive header{
-	color: var(--blue);
-	font-weight: 600;
 	padding: 0 2rem 0.3rem;
+
 	border-bottom: 1px solid var(--gray-line);
+
+	color: var(--blue);
+
+	font-weight: 600;
 }
 
 .challengeActive main{
 	flex: 1;
 
-	margin-top: 0.4rem;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	margin-top: 0.4rem;
 }
 
 .challengeActive main img{
 	display: none;
+
 	width: 4rem;
 }
 
 .challengeActive main strong{
 	display: none;
 
+	margin: 0.15rem 0 0.25rem;
+
+	color: var(--title);
+
 	font-size: 1.25rem;
 	font-weight: 600;
-	color: var(--title);
-	margin: 0.15rem 0 0.25rem;
 }
 
 .challengeActive main p{
 	width: 100%;
+
+	margin-bottom: 0.4rem;
+
 	font-size: 0.8rem;
 	line-height: 1.5;
-	margin-bottom: 0.4rem;
 }
 
 .challengeActive main h1{
+	margin: 0.15rem 0 0.25rem;
+
+	color: var(--title);
+
 	font-size: 1.40rem;
 	font-weight: 600;
-	color: var(--title);
-	margin: 0.15rem 0 0.25rem;
 }
 
 .challengeActive main h2{
+	margin: 0.15rem 0 0.25rem;
+
+	color: var(--title);
+
 	font-size: 1.30rem;
 	font-weight: 600;
-	color: var(--title);
-	margin: 0.15rem 0 0.25rem;
 }
 
 .challengeActive footer{
@@ -125,11 +138,11 @@
 }
 
 .challengeActive footer button{
-	height: 3rem;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	height: 3rem;
 
 	border: 0;
 	border-radius: 5px;
@@ -161,11 +174,13 @@
 
 	.challengeNotActive strong{
 		width: 90%;
+
 		font-size: 1.40rem;
 	}
 
 	.challengeNotActive p{
 		max-width: 80%;
+
 		font-size: 1.15rem;
 	}
 
@@ -176,14 +191,14 @@
 	.challengeActive{
 		height: 100%;
 
-		padding: 1rem 2rem;
-
 		margin-top: 0;
+		padding: 1rem 2rem;
 	}
 
 	.challengeActive header{
-		font-size: 1.25rem;
 		padding: 0 2rem 1.5rem;
+
+		font-size: 1.25rem;
 	}
 
 	.challengeActive main{
@@ -192,8 +207,10 @@
 
 	.challengeActive main img{
 		display: block;
-		margin-top: 10px;
+
 		width: 140px;
+
+		margin-top: 10px;
 	}
 
 	.challengeActive main strong{
@@ -202,8 +219,10 @@
 
 	.challengeActive main p{
 		width: 100%;
-		font-size: 1rem;
+
 		margin-bottom: 10px;
+		
+		font-size: 1rem;
 	}
 
 	.challengeActive main h1{
@@ -220,17 +239,17 @@
 @media screen and (min-width: 698px) {
 	.challengeBoxContainer{
 		height: 100%;
-		background: var(--white);
-		box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 
 		margin-top: 0.35rem;
 		margin-bottom: 0.35rem;
+
+		background: var(--white);
+		
+		box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 	}
 
 	.challengeNotActive{
 		height: 100%;
-
-		//padding: 6.3rem 2rem;
 
 		margin-top: 0;
 	}
@@ -245,8 +264,10 @@
 
 	.challengeNotActive p{
 		max-width: 80%;
-		font-size: 1.2rem;
+
 		margin-top: 3rem;
+
+		font-size: 1.2rem;
 	}
 
 	.challengeNotActive p img{
@@ -254,8 +275,9 @@
 	}
 
 	.challengeActive header{
-		font-size: 1.25rem;
 		padding: 0 2rem 1.5rem;
+
+		font-size: 1.25rem;
 	}
 
 	.challengeActive main{
@@ -268,7 +290,9 @@
 
 	.challengeActive main p{
 		width: 100%;
-		font-size: 1rem;
+
 		margin-bottom: 10px;
+		
+		font-size: 1rem;
 	}
 }
