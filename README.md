@@ -12,14 +12,23 @@
 </p>
 
 
+Povi é um projeto desenvolvido a partir do move.it, que por sua vez é o projeto  que foi desenvolvido durante a Next Level Week 4. As incrementações realizadas no povi foram:
 
-O povi é uma aplicação de produtividade que uni a técnica de Pomodoro com exercícios para o corpo e para os olhos.
+- Adicionar botão que desativa/ativa o som das notificações.
+- Converter estilos para Mobile First.
+- Adicionar responsividade.
+- Pequena mudança nas cores do layout.
+- Mudança do favicon.
+
+O povi/move.it é uma aplicação de produtividade que une a técnica de Pomodoro com exercícios para o corpo e para os olhos.
 
 A técnica de Pomodoro consiste em ciclos com foco total na atividade que está sendo executada intercalados com período de descanso.
 
-Ao fim de cada ciclo são realizados os exercícios citados acima. O objetivo desses exercícios é garantir que no período que o usuário estar sentado em frente ao computador ele realize alguma movimentação. Isso é importante para evitar que o usuário tenha problemas de saúde por estar longos períodos de tempo sem realizar nenhuma movimentação.
+Ao fim de cada ciclo são realizados os exercícios citados acima. O objetivo desses exercícios é garantir que no período que o usuário estiver sentado em frente ao computador ele realize alguma movimentação. Isso é importante para evitar que o usuário tenha problemas de saúde por estar longos períodos de tempo sem realizar nenhuma movimentação.
 
-Com o objetivo de motivar o usuário a realizar os exercícios, foi incorporado gameficação na aplicação por meio de uma barra de experiência e level que evoluem conforme o usuário completa os desafios e de um histórico de desafios completados.
+Com o objetivo de motivar o usuário a realizar os exercícios, foi incorporado gamificação na aplicação por meio de uma barra de experiência e level que evoluem conforme o usuário completa os desafios e de um histórico de desafios completados.
+
+**Povi no desktop:**
 
 
 
@@ -27,6 +36,8 @@ Com o objetivo de motivar o usuário a realizar os exercícios, foi incorporado 
     <img src="public/screenshots/apresentacao-desktop.png" alt="Screenshot da tela inicial na versão Desktop" />
 </h1>
 
+
+**Povi no mobile:**
 
 
 <h1 align="center">
@@ -54,7 +65,7 @@ Com o objetivo de motivar o usuário a realizar os exercícios, foi incorporado 
 - Iniciar um ciclo de 25 minutos.
 - Abandonar um ciclo.
 - Propostas de desafios para exercitar o corpo e os olhos ao fim de cada ciclo.
-- Ganhar experiência e subir de level completando os desafios.
+- Ganhar experiência e subir de nível completando os desafios.
 - Controlar se o som das notificações estará ativo ou mutado.
 - Notificação informando que faltam 10 minutos para o fim do ciclo.
 - Notificação informando que faltam 5 minutos para o fim do ciclo.
